@@ -1,0 +1,32 @@
+ALGORITHM read_sentence
+VAR
+    str : STRING
+    i,j,v : INTEGER
+    nbr_char : INTEGER :=0
+    nbr_wrd : INTEGER :=0
+    nbr_vls : INTEGER :=0
+BEGIN
+    write("write a sentence")
+    read(str)
+    FOR i FROM 0 TO str.length-1 STEP 1 DO
+    nbr_char = nbr_char+i 
+        if (i=length-1) and (str[i]<>".") then
+        write("The sentence should end with,., rewrite your sentence")
+        end_if
+    END_FOR
+    nbr_char:=nbr_char+1
+    write("The number of caracters is" nbr_char)
+    FOR J FROM 0 TO str.length-1 STEP 1 DO
+        if (str[j]=" ") then
+        nbr_wrd=nbr_wrd+1
+        end_if
+    END_FOR
+    nbr_wrd = nbr_wrd+1
+    write("The number of words is" nbr_wrd)
+    FOR v FROM 0 TO str.length-1 STEP 1 DO
+        if (str[v]="a") or (str[v]="e") or (str[v]="i") or (str[v]="o") or (str[v]="u") then
+        nbr_vls = nbr_vls+1
+        end_if
+    END_FOR
+    write("The number of vowels is" nbr_vls)
+END
